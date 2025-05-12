@@ -1,0 +1,10 @@
+# Redis缓存示例
+import redis
+r = redis.Redis()
+
+def get_cached_code(key: str):
+    if (cached := r.get(key)):
+        return cached.decode()
+    code = generate_code(key)
+    r.setex(key, 3600, code)  # 缓存1小时
+    return code
