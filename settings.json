@@ -1,0 +1,6 @@
+{
+    "python.formatting.provider": "autopep8",         // 设置代码格式化工具
+    "editor.formatOnSave": true,                      // 保存时自动格式化
+    "python.linting.enabled": true,                   // 启用代码检查
+    "python.linting.pylintEnabled": true              // 启用 Pylint 检查器
+}
